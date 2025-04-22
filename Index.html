@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e7876803c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="home">
+      <section class="header">
+        <nav>
+            <a href="index.html"><img src="./logopic.jpeg"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hiddenMenu()" ></i>
+
+        <ul>
+          <li><a href="admin.html">ADMIN LOGIN</a></li>
+          <li><a href="#home">HOME</a></li>
+
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="pricing.html">PRICING</a></li>
+          <li><a href="enroll.html">Enroll NOW</a></li>                 
+        </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<div class="text-box">
+  <h1>E-Learning Platform</h1>
+  <h4> Empowering Learning, Anytime, Anywhere!</h4>
+  <br/> <h4>Expand Your Knowledge with Expert-Led Courses </h4>
+  
+</div>
+      </section>
+    </section>
+      
+<!------courses------>
+<section class="courses">
+  <h1>Our courses</h1>
+  <p>Explore our expert-led programming and web development courses</p>
+   <div class="row">
+    <div class="courses-col">
+      <fieldset>
+    
+      <img src="./c++pic.jpeg">
+      <h3>C++</h3>
+      <p>Master the fundamentals of C++ programming, including object-oriented concepts and data structures.</p>
+
+    </fieldset>
+    </div>
+    <div class="courses-col">
+      <fieldset>
+      <img src="./htmlpic.png">
+      <h3>WebDevelopment</h3>
+      <p>Learn HTML, CSS, and JavaScript to build interactive and responsive websites from scratch.</p>
+
+    </fieldset>
+    </div>
+    <div class="courses-col">
+      <fieldset>
+      <img src="./javapic.jpeg">
+      <h3>Java</h3>
+      <p>Become proficient in Java programming, covering core concepts, OOP, and frameworks like Spring Boot.</p>
+
+    </fieldset>
+    </div>
+  </div>
+    <div class="row">
+    <div class="courses-col">
+      <fieldset>
+      <img src="./pythopic.jpeg">
+      <h3>Python</h3>
+      <p>Dive into Python programming, covering basics to advanced topics like machine learning and AI.</p>
+
+      </fieldset>
+    </div>
+    <div class="courses-col">
+      <fieldset>
+      <img src="./javascriptpic.png">
+      <h3>javascript</h3>
+      <p>Understand JavaScript, ES6+, and modern front-end libraries like React.js to build dynamic websites.</p>
+
+    </fieldset>
+    </div>
+    <div class="courses-col">
+      <fieldset>
+      <img src="./php.png">
+      <h3>Php</h3>
+      <p>Build dynamic and database-driven websites using PHP and MySQL.</p>
+
+    </fieldset>
+    </div>
+   </div>
+</section>
+
+ <!--------Branches-------->
+ <section class="branches">
+  <h1>Our Learning Centers Across the State</h1>
+
+  <p>We have multiple centers across Maharashtra to provide in-person guidance for students.</p>
+  <div class="row">
+    <div class="branches-col">
+      <img src="./S1.jpeg">
+     <div class="Layer">
+      <h3>PUNE</h3>
+       </div>
+      </div>
+         <div class="branches-col">
+         <img src="./s2.jpeg">
+         <div class="Layer">
+          <h3>MUMBAI</h3>
+     </div>
+      </div>
+  </div>
+  <div class="row">    
+        <div class="branches-col">
+        <img src="./s3.jpeg">
+        <div class="Layer">
+           <h3>NAGPUR</h3>
+           </div>
+           </div>
+           <div class="branches-col">
+            <img src="./Images/Nashik.jpg">
+            <div class="Layer">
+               <h3>NASHIK</h3>
+               </div>
+               </div>
+          </div>
+    </div>
+        </section>
+      
+        <section class="about-us">
+        <h3>About US</h3>
+        <p> <p>Welcome to **LearnFlow**, where we redefine the way you experience online learning.
+          Our goal is to make education accessible, engaging, and personalized.</p>
+     
+        </p>
+        <h3>Why Choose LearnFlow?</h3>
+        <p>
+          1. **Flexible Learning**: Our platform offers self-paced courses so that you can learn at your convenience.<br><br>
+          2. **Expert Instructors**: Learn from industry experts with real-world experience in programming, web development, and more.<br><br>
+          3. **Practical Approach**: Get hands-on experience with projects and coding exercises to enhance your skills.<br><br>
+          4. **Certification**: Earn certificates upon course completion to showcase your skills in the job market.
+        </p>
+      </section>
+<!-----------Commitment ------------>                  
+<section class="Commitment">
+  <h3>Our Commitment</h3>
+    <h6>
+      "Empowering learners with knowledge, innovation, and accessibility—our commitment is
+       to provide high-quality education that is engaging, flexible, and tailored to your success. 
+       We believe in making learning a lifelong journey, accessible anytime, anywhere.
+       Whether you're mastering new skills or enhancing your expertise, 
+       we're here to support your growth every step of the way."
+    </h6>
+<div class="row">
+      <div class="Commitment-col">
+        <img src="./commit.jpeg" >
+        <p>
+          Achieve your learning goals anytime, anywhere."</p>
+        </div>
+   </div>
+</section>    
+
+               <!----Footer-->
+      <section class="footer">
+
+             <p>&copy; 2025 Learn Flow</p>
+
+              <span class="fas fa-phone">  </span><h5>020 2534 2492</h5> <br>
+              <span class="fas fa-envelope">  </span><h5>learnflow@gmail.com</h5> <br>
+              <span class="fas fa-map-marker-alt">  </span> <h5>24,Opp. Hastakala,<br>Laxmi Road<br>Pune</h5> <br>
+              
+      </section>                     
+            
+
+      <!-----JavaScript for toggle Menu---->
+      <script>
+        var navLinks = document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.right="0";
+
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+      </script>
+      <script>
+        // Function to fetch test message from the backend API
+        async function fetchTestMessage() {
+            try {
+                const response = await fetch('http://localhost:5000/api/test');
+                const data = await response.json();
+                console.log(data.message);  // Logs the response from the backend
+            } catch (error) {
+                console.error('Error fetching data from backend:', error);
+            }
+        }
+        
+        // Call the fetchTestMessage function when the page loads
+        window.onload = fetchTestMessage;
+        </script>
+        
+</body>
+</html>
