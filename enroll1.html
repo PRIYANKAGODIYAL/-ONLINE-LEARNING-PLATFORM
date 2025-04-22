@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Now</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3e7876803c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            background-color: #003057;
+            display: flex;
+            padding: 0% 2%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 70px;
+            position: relative;
+            margin-left: 2px;
+            margin-top: 2px;
+            margin-bottom: 1px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 4px 6px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            font-size: 20px;
+            color: #fcfcff;
+            text-decoration: none;
+        }
+
+        .nav-links ul li::after {
+            content: "";
+            width: 4%;
+            height: 5px;
+            background: #f3ac5b;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        /*-------------------------------------------EnrollNow-----------------------------------------------*/
+
+        #enroll-now {
+            padding: 30px;
+            text-align: center;
+            background-color: #cef0f0;
+        }
+
+        #enroll-now h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #003057;
+        }
+
+        form {
+            max-width: 400px;
+            align-items: center;
+            margin-left: 8px;
+            margin-right: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="textarea"],
+        input[type="date"],
+        input[type="number"],
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+            margin-left: 5px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        #label1 {
+            font-weight: thin;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: solid;
+            padding-left: 20px;
+            margin: 20px;
+            padding-right: 20px;
+            border-width: thin;
+            display: inline-flex;
+            border-radius: 5px;
+            border-color: #003057;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #003057;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            align-content: center;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #048ea7;
+        }
+
+        input[type="reset"] {
+            background-color: #003057;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-content: center;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #048ea7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-left: 30px;
+            background-color: #003057;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #048ea7;
+        }
+
+        /*----footer-------*/
+        .footer {
+            width: 100%;
+            padding: 0px;
+            min-height: 10vh;
+            background-color: #003057;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .footer p {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer h5 {
+            margin-bottom: 1px;
+            margin-top: 10px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: #fff;
+            font-size: 15px;
+            text-align: left;
+            display: inline-flex;
+            vertical-align: middle;
+            line-height: 20px;
+        }
+
+        .icons .fas {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .fa-phone {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .fa-envelope {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            margin-top: 30px;
+            cursor: pointer;
+            position: relative;
+            top: -7px;
+        }
+
+        .fa-map-marker-alt {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+            top: -7px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+<nav>
+    <img src="./logopic.jpeg" alt="Logo">
+    <div class="nav-links">
+        <ul>
+            <li><a href="admin.html">ADMIN LOGIN</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="courses.html">COURSES</a></li>
+            <!-- <li><a href="#enroll-now">Courses</a></li> -->
+
+            <li><a href="pricing.html">PRICING</a></li>
+            <li><a href="enroll.html">Enroll NOW</a></li> 
+        </ul>
+    </div>
+</nav>
+
+
+
+        <section id="enroll-now">
+
+            <h1>Enroll Now</h1>
+            <fieldset>
+                <form id="enroll-now" method="post" action="/submit-order">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" class="name" placeholder="Full Name" required><br>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="email" placeholder="Email" required><br>
+                
+                    <label for="ph_no">Phone Number:</label>
+                    <input type="tel" id="ph_no" name="phone" class="ph_no" placeholder="Phone Number" required><br>
+                
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" class="address" placeholder="Your Address" required></textarea><br>
+                
+                    <label for="course-start-date">Course Start Date:</label>
+                    <input type="date" id="course_start_date" name="course_start_date" class="date_selected" required><br>
+                    
+                    <label for="learning-slot">Preferred Learning Slot:</label><br>
+                    <input type="radio" name="learning_slot" value="1" required> 9am - 11am <br>
+                    <input type="radio" name="learning_slot" value="2" required> 11am - 1pm <br>
+                    <input type="radio" name="learning_slot" value="3" required> 1pm - 3pm <br>
+                    <input type="radio" name="learning_slot" value="4" required> 3pm - 5pm <br>
+                    <input type="radio" name="learning_slot" value="5" required> 5pm - 7pm <br>
+                    
+                    <label for="course">Select Course:</label>
+                    <select id="course" name="course_selected" class="course_selected" required>
+                        <option value="">--Select a Course--</option>
+                        <option value="Webdevelopment">Web Development</option>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="Php">Php</option>
+                    </select><br>
+                
+                    <div id="total-price-container"></div>
+                
+                    <input type="reset" value="Cancel" class="cancle_btn">
+                    <button id="payment-button" class="btn">Make Payment</button>
+                </form>
+                
+                
+            </fieldset>
+        </section>
+
+        <!----Footer-->
+        <section class="footer">
+
+            <p>&copy; 2025 Learn Flow</p>
+
+             <span class="fas fa-phone">  </span><h5>020 2534 2492</h5> <br>
+             <span class="fas fa-envelope">  </span><h5>learnflow@gmail.com</h5> <br>
+             <span class="fas fa-map-marker-alt">  </span> <h5>24,Opp. Hastakala,<br>Laxmi Road<br>Pune</h5> <br>
+             
+     </section>  
+
+
+        <script>
+            var myButton = document.querySelector(".btn");
+        
+            myButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default form submission
+                
+                var myName = document.querySelector(".name")?.value || "";
+                var myEmail = document.querySelector(".email")?.value || "";
+                var myPhone = document.querySelector(".ph_no")?.value || "";
+                var myAddress = document.querySelector(".address")?.value || "";
+                var myEnrollmentDate = document.querySelector(".date_ordered")?.value || "";
+                var mySelectedCourse = document.querySelector(".course_selected")?.value || "";
+        
+                if (!myName || !myEmail || !myPhone || !myEnrollmentDate || !mySelectedCourse) {
+                    alert("Please fill in all required fields.");
+                    return;
+                }
+        
+                var studentObj = {
+                    name: myName,
+                    email: myEmail,
+                    phone: myPhone,
+                    address: myAddress
+                };
+        
+                var enrollmentObj = {
+                    email: myEmail,
+                    enrollment_date: myEnrollmentDate,
+                    course_selected: mySelectedCourse,
+                    status: "Pending"
+                };
+        
+                console.log(studentObj, enrollmentObj);
+        
+                fetch("http://localhost:3000/register-student", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(studentObj)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Student registered successfully:', data);
+                })
+                .catch(error => {
+                    console.error('Error registering student:', error);
+                });
+        
+                fetch("http://localhost:3000/enroll-course", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify(enrollmentObj)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Course enrollment successful:', data);
+                })
+                .catch(error => {
+                    console.error('Error enrolling course:', error);
+                });
+            });
+        
+            document.getElementById('enroll-now')?.addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const selectedCourse = urlParams.get('course');
+        
+                let totalPrice = 0;
+        
+                switch (selectedCourse) {
+                    case 'webdevelopment': totalPrice = 4999; break;
+                    case 'Python': totalPrice = 6999; break;
+                    case 'JAVA': totalPrice = 5999; break;
+                    case 'C++': totalPrice = 7999; break;
+                    default: totalPrice = 0;
+                }
+        
+                document.getElementById('total-price-container').innerHTML = 
+                    `<h2>Total Course Fee: <span id='total-amount'>${totalPrice}</span> Rs</h2>`;
+        
+                setTimeout(() => {
+                    window.location.href = 'payment.html';
+                }, 10000);
+            });
+        </script>
+        
+
+</body>
+
+</html>

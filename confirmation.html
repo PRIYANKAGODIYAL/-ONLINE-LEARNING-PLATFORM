@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enrollment Confirmation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #003057;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  .container {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #b1def3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #003057;
+  }
+  h2 {
+    color: #003057;
+  }
+  p {
+    font-size: 18px;
+  }
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+  .redirect {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enrollment Successful! ✅</h2>
+    <p>Thank you, <span id="studentName"></span>! You have successfully enrolled in:</p>
+    <p><strong>Course:</strong> <span id="courseName"></span></p>
+    <p><strong>Time Slot:</strong> <span id="timeSlot"></span></p>
+    <p class="success">A confirmation email has been sent to you.</p>
+    <p class="redirect">Redirecting to homepage in <span id="countdown">5</span> seconds...</p>
+  </div>
+
+  <script>
+    // Retrieve stored data from localStorage
+    const studentName = localStorage.getItem("studentName");
+    const courseName = localStorage.getItem("courseName");
+    const timeSlot = localStorage.getItem("timeSlot");
+
+    // Display details
+    document.getElementById("studentName").textContent = studentName || "Student";
+    document.getElementById("courseName").textContent = courseName || "N/A";
+    document.getElementById("timeSlot").textContent = timeSlot || "N/A";
+
+    // Countdown before redirection
+    let count = 5;
+    const countdownElement = document.getElementById("countdown");
+    const interval = setInterval(() => {
+      count--;
+      countdownElement.textContent = count;
+      if (count === 0) {
+        clearInterval(interval);
+        window.location.href = "index.html"; // Change to the desired page
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

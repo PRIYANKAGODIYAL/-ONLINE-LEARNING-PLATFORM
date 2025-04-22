@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+   <title>Pricing</title>
+   <link rel="stylesheet">
+   <script src="https://kit.fontawesome.com/3e7876803c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+          }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            background-color: #003057;
+            display: flex;
+            padding: 0% 2%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 70px;
+            position: relative;
+            margin-left: 2px;
+            margin-top: 2px;
+            margin-bottom: 1px;
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 4px 6px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            font-size: 20px;
+            color: #fcfcff;
+            text-decoration: none;
+        }
+
+        .nav-links ul li::after {
+            content: "";
+            width: 4%;
+            height: 5px;
+            background: #f3ac5b;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        #pricing {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        #pricing h1{
+             text-align: center;
+             font-size: 36px;
+             color: #003057;
+        }
+
+        .pricing-col {
+            background-color: #003057;
+            border: 3px solid #ad8888;
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(101, 110, 240, 0.1);
+        }
+        .pricing-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        .pricing-col h3 {
+            color: #eb830e;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        @media screen and (max-width: 600px) {
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-links li:first-child {
+                margin-bottom: 10px;
+            }
+            .nav-links i {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+  .heading {
+    color: #003057;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .step-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin-left: 280px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+
+  .step {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #cef0f0;
+    flex: 2;
+    margin: 0 20px; /* Added margin for spacing */
+  }
+
+  .step img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .step p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .step h2 {
+    color: #003057;
+  }
+
+        /*----footer-------*/
+        .footer {
+  width: 100%;
+  padding: 0px;
+  min-height: 10vh;
+  background-color: #003057;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer h5 {
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  display: inline-flex;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.icons .fas{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.fa-phone{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.fa-envelope{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  position: relative;
+  top: -7px;
+}
+
+.fa-map-marker-alt{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  top: -7px;
+}
+    </style>          
+</head>
+           
+<body>
+      <section class="header">
+        <nav>
+            <img src="./logopic.jpeg">
+            <div class="nav-links" id="navLinks">
+           <!-- <i class="fa fa-times" onclick="hiddenMenu()" ></i> -->
+<ul>
+           <li><a href="admin.html">ADMIN LOGIN</a></li>
+           <li><a href="#home">HOME</a></li>
+           <li><a href="courses.html">COURSES</a></li>
+           <li><a href="pricing.html">PRICING</a></li>
+           <li><a href="enroll.html">Enroll NOW</a></li> 
+        </ul>
+        </div>
+       <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+
+        </nav>
+
+        <section id="pricing">
+          <h1>Subscription Plans</h1>
+          <div class="row">
+              <div class="pricing-col">
+                  <h4>Basic Plan</h4><br>
+                  <h3>₹499/month</h3>
+                  <p>✔ Access to recorded courses</p>
+                  <p>✔ Study materials</p>
+                  <p>✖ No live sessions</p>
+                  <p>✖ No certificate</p>
+              </div>
+      
+              <div class="pricing-col">
+                  <h4>Standard Plan</h4><br>
+                  <h3>₹999/month</h3>
+                  <p>✔ Access to recorded courses</p>
+                  <p>✔ Study materials</p>
+                  <p>✔ Weekly live sessions</p>
+                  <p>✖ No certificate</p>
+              </div>
+      
+              <div class="pricing-col">
+                  <h4>Premium Plan</h4><br>
+                  <h3>₹1499/month</h3>
+                  <p>✔ Access to all courses</p>
+                  <p>✔ Study materials</p>
+                  <p>✔ Weekly live sessions</p>
+                  <p>✔ Certification upon completion</p>
+              </div>
+      
+              <div class="pricing-col">
+                  <h4>One-on-One Mentorship</h4><br>
+                  <h3>₹2499/session</h3>
+                  <p>✔ 1-hour live session with an expert</p>
+                  <p>✔ Personalized guidance</p>
+                  <p>✔ Career consultation</p>
+              </div>
+          </div>
+      
+          <br>
+      
+          <div class="row">
+              <div class="pricing-col">
+                  <h4>Additional Services</h4><br>
+                  <h3>Mock Interviews: ₹799</h3><br>
+                  <h3>Resume Review: ₹499</h3><br>
+                  <h3>Skill Assessment Test: ₹399</h3><br>
+              </div>
+      
+              <div class="pricing-col">
+                  <h4>Corporate Training</h4><br>
+                  <h3>Small Team: ₹9,999</h3><br>
+                  <h3>Medium Team: ₹24,999</h3><br>
+                  <h3>Large Team: ₹49,999</h3><br>
+              </div>
+          </div>
+      </section>
+      
+<!------------------------------How we work --------------------------->
+<section id="howItWorks" class="section">
+  <h1 class="heading">How It Works</h1>
+  <div class="step-container">
+      <div class="step" style="flex: 2;"> <!-- Increased width for first step -->
+          <img src="./signup.jpeg" alt="Sign Up">
+          <h2 style="color: #003057;">Sign Up & Enroll</h2>
+          <p>Create your account, choose your course, and start learning instantly. Gain access to expert-led content.</p>
+      </div>
+      <div class="step">
+        <video id="v1" width="200" height="200" controls autoplay muted>
+            <source src="./v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <script>
+            // Ensure the script runs only after the page loads
+            document.addEventListener("DOMContentLoaded", function () {
+                let video = document.getElementById('v1');
+                
+                if (video) {
+                    video.addEventListener('click', function() {
+                        this.muted = false;
+                        this.volume = 1.0;
+                    });
+                }
+            });
+        </script>
+    
+        <button onclick="document.getElementById('v1').muted = false;">Unmute</button>
+        
+        
+        
+       
+          <h2 style="color: #003057;">Start Learning</h2>
+          <p>Watch video lessons, go through interactive study materials, and complete quizzes at your own pace.</p>
+      </div>
+      <div class="step">
+        <div class="step">
+            <video id="v2" width="200" height="200" controls autoplay muted>
+                <source src="./v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <script>
+                // Ensure the script runs only after the page loads
+                document.addEventListener("DOMContentLoaded", function () {
+                    let video = document.getElementById('v2');
+                    
+                    if (video) {
+                        video.addEventListener('click', function() {
+                            this.muted = false;
+                            this.volume = 1.0;
+                        });
+                    }
+                });
+            </script>
+        
+            <button onclick="document.getElementById('v2').muted = false;">Unmute</button>
+        </div>
+        
+        
+                <h2 style="color: #003057;">Start Learning</h2>
+        <p>Watch video lessons, go through interactive study materials, and complete quizzes at your own pace.</p>
+    </div>
+      <div class="step">
+          <img src="./certificate.jpeg" alt="Earn Certificate">
+          <h2 style="color: #003057;">Earn Your Certificate</h2>
+          <p>Complete your course, pass assessments, and earn a recognized certificate to showcase your skills.</p>
+      </div>
+  </div>
+</section>
+
+
+               <!----Footer-->
+               <section class="footer">
+                <p>&copy; 2024 LearnFlow</p>
+            
+                <span class="fas fa-phone"> <h5>020 2534 2492</h5> </span> <br>
+                <span class="fas fa-envelope"> <h5>support@learnflow.com</h5> </span> <br>
+                <span class="fas fa-map-marker-alt"> <h5>24, Opp. Hastakala, <br>Laxmi Road<br>Pune</h5> </span> <br>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            
+                <p>Empowering learners with quality education. Start your journey today!</p>
+            </section>
+            
+</body>
+</html>

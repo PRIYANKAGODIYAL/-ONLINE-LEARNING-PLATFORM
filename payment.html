@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/3e7876803c.js" crossorigin="anonymous"></script>
+  <title>Payment Gateway</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      background-color: #003057;
+      display: flex;
+      padding: 0% 2%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img {
+      width: 70px;
+      position: relative;
+      margin-left: 2px;
+      margin-top: 2px;
+      margin-bottom: 1px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 4px 6px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      font-size: 20px;
+      color: #fcfcff;
+      text-decoration: none;
+    }
+
+    .nav-links ul li::after {
+      content: "";
+      width: 4%;
+      height: 5px;
+      background: rgb(110, 248, 31);
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after {
+      width: 100%;
+    }
+
+    .payment-form {
+      background-color: #cef0f0;
+      padding: 50px;
+      border-radius: 40px;
+      box-sizing: 200px;
+      margin-left: 300px;
+      margin-right: 300px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #003057;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .payment-option {
+      text-align: center;
+      /* Center align the radio buttons */
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .payment-option label {
+      font-size: 25px;
+      text-align: left;
+      /* Align the label text to the left */
+      display: inline-block;
+      /* Display labels in a block */
+    }
+
+    .payment-option input[type="radio"] {
+      margin-right: 15px;
+    }
+
+
+    .total-amount {
+      color: #003057;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    h4 {
+      color: #003057;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .qr-code {
+      display: none;
+      /* Hide the QR code container by default */
+      margin-top: 20px;
+      /* Add some top margin for spacing */
+    }
+
+    .qr-code img {
+      width: 200px;
+      /* Adjust the width of the QR code image as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+      border: 1px solid #ccc;
+      /* Add a border to the QR code image */
+      border-radius: 10px;
+      /* Add border radius for rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Add a shadow effect */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 50%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 40%;
+      padding: 15px;
+      background-color: #003057;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    /*----footer-------*/
+    .footer {
+      width: 100%;
+      padding: 0px;
+      min-height: 10vh;
+      background-color: #003057;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .footer p {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .footer h5 {
+      margin-bottom: 1px;
+      margin-top: 10px;
+      margin-left: 20px;
+      font-weight: 600;
+      color: #fff;
+      font-size: 15px;
+      text-align: left;
+      display: inline-flex;
+      vertical-align: middle;
+      line-height: 20px;
+    }
+
+    .icons .fas {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .fa-phone {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .fa-envelope {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+      margin-top: 30px;
+      cursor: pointer;
+      position: relative;
+      top: -7px;
+    }
+
+    .fa-map-marker-alt {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      position: relative;
+      top: -7px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <img src="./logopic.jpeg">
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="admin.html">ADMIN LOGIN</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="courses.html">COURSES</a></li>
+          <li><a href="pricing.html">PRICING</a></li>
+          <li><a href="enroll.html">Enroll NOW</a></li> 
+        </ul>
+      </div>
+      
+      <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+    </nav>
+
+    <div class="payment-form">
+      <form id="payment-form" onsubmit="submitPayment(event)">
+        <h2>Payment Options</h2>
+    
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="number" name="amount" placeholder="Enter amount" required>
+        <input type="text" name="transaction_id" placeholder="Transaction ID (if applicable)">
+        <input type="hidden" name="payment_status" value="Pending">
+    
+        <div class="payment-option">
+          <label for="cash-on-delivery">
+            <input type="radio" name="payment" id="cash-on-delivery" value="cash" required>
+            Cash on Delivery
+          </label>
+        </div>
+        <div class="payment-option">
+          <label for="upi-payment">
+            <input type="radio" name="payment" id="upi-payment" value="upi" required>
+            UPI Payment
+          </label>
+        </div>
+    
+        <div class="qr-code" id="qr-code-upi">
+          <img src="./scanner.jpeg" alt="UPI QR Code">
+        </div>
+    
+        <input type="submit" value="Proceed to Payment">
+      </form>
+    </div>
+    
+    <script>
+      document.querySelectorAll("input[name='payment']").forEach((radio) => {
+    radio.addEventListener("change", function () {
+        document.getElementById("qr-code-upi").style.display =
+            this.value === "upi" ? "block" : "none";
+    });
+});
+
+      document.getElementById("upi-payment").addEventListener("click", function () {
+        document.getElementById("qr-code-upi").style.display = this.checked ? "block" : "none";
+      });
+    
+      function submitPayment(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const paymentMethod = formData.get("payment");
+
+    if (!paymentMethod) {
+        alert("Please select a payment method.");
+        return;
+    }
+
+    const paymentData = {
+        email: formData.get("email"),
+        payment_method: paymentMethod,
+        amount: parseFloat(formData.get("amount")),
+        transaction_id: formData.get("transaction_id") || "N/A",
+        payment_status: formData.get("payment_status"),
+    };
+
+    console.log("Sending Payment Data:", paymentData);
+
+    fetch("http://localhost:5000/submit-payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(paymentData),
+    })
+        .then((response) => {
+            if (!response.ok) throw new Error("Network error");
+            return response.json();
+        })
+        .then((data) => {
+            console.log("Response:", data);
+            alert("Payment submitted successfully!");
+            window.location.href = "/confirmation.html";
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        });
+}
+
+    </script>
+    
+</body>
+
+</html>
